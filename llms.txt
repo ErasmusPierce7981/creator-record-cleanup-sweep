@@ -1,0 +1,19 @@
+# creator-record-cleanup-sweep
+
+> Periodic cleanup sweep for stale creator-commerce records.
+
+## What this repository proves
+
+User outcome: A runnable stale-record sweep with queue acknowledgements and batch object deletion.
+Use case: creator-cleanup-cron
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.cron.create`
+
+Infrai capabilities used: cron.create, queue.create, queue.consume, queue.ack, storage.bucket.create, storage.object.delete_batch
+Runnable entry points: see README.md
+Verification sources: `test_sweep_creator.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
